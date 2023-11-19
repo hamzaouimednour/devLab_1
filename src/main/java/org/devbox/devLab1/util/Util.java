@@ -21,5 +21,30 @@ public class Util {
         return randomString.toString();
     }
 
+    /**
+     * Check if a given string is empty or null.
+     *
+     * @param str Input string
+     * @return True if the string is empty or null, false otherwise
+     */
+    public static boolean isNullOrEmpty(String str) {
+        return str == null || str.trim().isEmpty();
+    }
+
+    /**
+     * Validate if a given email address is valid.
+     *
+     * @param email Email address to validate
+     * @return True if the email is valid, false otherwise
+     */
+    public static boolean isValidEmail(String email) {
+        if (isNullOrEmpty(email)) {
+            return false;
+        }
+
+        // Simple email validation logic
+        return email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
+    }
+
     // Add other utility methods as needed
 }
