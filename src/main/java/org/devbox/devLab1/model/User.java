@@ -1,8 +1,10 @@
 package org.devbox.devLab1.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,8 +14,5 @@ public class User {
     public User(long l, String user1) {
     }
 
-    public String getUsername() {
-        return username;
-    }
-    // Other fields, getters, and setters
+    // Other fields, getters, and setters are generated using Lombok plugin
 }
