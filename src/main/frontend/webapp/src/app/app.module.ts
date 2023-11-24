@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
+import { PersonTasksFilterPipe } from './pipes/person-tasks-filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    PersonTasksFilterPipe
   ],
   imports: [
     BrowserModule,
