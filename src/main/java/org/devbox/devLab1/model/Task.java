@@ -10,6 +10,7 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private String description;
     // Other fields, getters, and setters are generated using Lombok plugin
 }
